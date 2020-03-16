@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+background-color: #24252A;
+}
+
+.grid
+{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+li, a, button{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%; /* top-botton and left-rigth*/
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.nav_links{
+  list-style: none;
+}
+
+.nav_links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #0088a9;
+}
+
+.dropd{
+  display: none;
+  position: absolute;
+}
+
+.dropd li{
+  display: block;
+  padding-top: 10px;
+}
+
+.nav_links li:hover ul{
+  display: block;
+}
+
+button{
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.catg{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%; /* top-botton and left-rigth*/
+}
+
+.catg ul{
+  list-style: none;
+}
+
+.catg ul li{
+  display: inline-block;
+  padding: 0px 25px;
+}
+
+.catg li a{
+  transition: all 0.3s ease 0s;
+}
+
+.catg li a:hover{
+    color: #0088a9;
+}
+
+.slide-container{
+  width: 1300px;
+  height 750px;
+  /*border: 5px solid black;*/
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+}
+
+.slides{
+  display: flex;
+  width: 100%;
+  height: 700px;
+}
+
+#prevBtn{
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 5%;
+  font-size: 30px;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.4;
+}
+
+#nextBtn{
+  outline: none;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 5%;
+  font-size: 30px;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+#prevBtn:hover{
+  opacity: 1;
+}
+#nextBtn:hover{
+  opacity: 1;
+}
+
+.content{
+  margin-top: 50px;
+  display: grid;
+  grid-template-column: 40% 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas: "title title"
+  "mp othg";
+  background-color: #1f1f1f;
+}
+
+.title
+{
+  grid-area: title;
+  background-color: inherit;
+  text-align: center;
+  grid-area: title;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 100px;
+  color: #ecf0f1;
+}
+
+.mp-game{
+  background-color: inherit;
+  grid-area: mp;
+  margin-top: 50px;
+  padding: 0px 20px;
+}
+.mp-game img
+{
+  height: 497px;
+  width: 100%;
+  border: 1px solid;
+}
+
+.oth-games{
+  grid-area: othg;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 10vw);
+  grid-gap: 15px;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+.gallery__item--4 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.gallery__item--5 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+.gallery__item--6 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+/*sigin popup*/
+
+/* Footer*/
+footer{
+  width: 100%;
+  background-color: #000;
+  padding: 40px 15%;
+}
+
+footer nav{
+  float: left;
+}
+
+footer nav ul{
+  background-color: #000;
+}
+
+footer nav ul li{
+  background-color: inherit;
+  display: inline-block;
+  margin-left: 25px;
+  list-style: none;
+}
+
+footer nav ul li a:hover{
+  color: #2f2f2f;
+}
+
+footer nav ul li a{
+  background-color: inherit;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer-logo{
+  float: right;
+  padding-right: 60px;
+  background-color: #000;
+}
+
+.footer-logo img{
+  background-color: #000;
+}
+
+/*.grid div:nth-child(even){
+  background-color: red;
+}
+
+.grid div:nth-child(odd){
+  background-color: green;
+}*/
